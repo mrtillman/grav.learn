@@ -1,0 +1,7 @@
+Here is the reference solution, if you're curious:
+
+  module.exports = function (grav) {
+    grav.login("user@example.com", "password");
+    return grav.exists();
+  }
+

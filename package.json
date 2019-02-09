@@ -6,7 +6,7 @@
     "start": "node runner.js"
   },
   "bin": {
-    "example-adventure": "runner.js"
+    "grav.learn": "runner.js"
   },
   "author": "mrtillman",
   "license": "MIT",

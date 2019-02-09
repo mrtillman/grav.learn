@@ -1,8 +1,8 @@
-Write a program that exports a single function to multiple 2 arguments.
+Write a program that pings the Gravatar API.
 
 Here is some boilerplate code to get you started:
 
-  module.exports = function (a, b) {
+  module.exports = function (grav) {
     // ...
   }
 
