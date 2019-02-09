@@ -1,7 +1,10 @@
 Here is the reference solution, if you're curious:
 
-  module.exports = function (grav) {
-    grav.login("user@example.com", "password");
-    return grav.exists();
+  const { Grav } = require('grav.client');
+
+  module.exports = function () {
+    const grav = Grav.login("user@example.com", "password");
+    grav.autoParse = true;
+    return grav.address();
   }
 

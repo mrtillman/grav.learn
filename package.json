@@ -8,6 +8,10 @@
   "bin": {
     "grav.learn": "runner.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrtillman/grav.learn.git"
+  },
   "author": "mrtillman",
   "license": "MIT",
   "keywords": [
@@ -18,6 +22,7 @@
   ],
   "dependencies": {
     "adventure": "^2.2.0",
-    "adventure-verify": "^2.1.1"
+    "adventure-verify": "^2.1.1",
+    "grav.client": "^2.1.5"
   }
 }

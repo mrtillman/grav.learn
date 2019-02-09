@@ -1,8 +1,9 @@
-Write a program that pings the Gravatar API.
+Write a program that gets the primary email address.
 
 Here is some boilerplate code to get you started:
 
   module.exports = function (grav) {
+    grav.autoParse = true;
     // ...
   }
 

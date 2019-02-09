@@ -1,18 +1,17 @@
-exports.problem = 'Make a dinosaur sound.\n'
-    + 'Use `$ADVENTURE_COMMAND verify YOUR_TEXT...` to make your sound.'
-;
+const fs = require('fs');
+const path = require('path');
+const verify = require('adventure-verify');
+const { Grav } = require('grav.client');
+const creds = require('../../creds');
 
-exports.verify = function (args, cb) {
-    if (/RAWR/.test(args)) {
-        console.log('Wow that is a convincing dinosaur.\n');
-        cb(true);
-    }
-    else if (/rawr/i.test(args)) {
-        console.log('Close, but too quiet. Try louder.\n');
-        cb(false);
-    }
-    else {
-        console.log("That doesn't sound like a dinosaur at all.\n");
-        cb(false);
-    }
-};
+exports.problem = fs.createReadStream(__dirname + '/problem.txt');
+exports.solution = fs.createReadStream(__dirname + '/solution.txt');
+
+exports.verify = verify({ modeReset: true }, function (args, t) {
+    const f = require(path.resolve(args[0]));
+    t.equal(typeof f, 'function', 'you exported a function');
+    f().then(res => {
+        t.equal(true, Boolean(res.response), 'got a response')
+        t.end();
+    });
+});

@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-var adventure = require('adventure');
-var shop = adventure('example-adventure');
+const adventure = require('adventure');
+const shop = adventure('grav.learn');
 
-var problems = [ 'grav.exists', 'grav.address', 'grav.test' ];
+const problems = [ 'grav.exists', 'grav.address', 'grav.test' ];
+
 problems.forEach(function (prob) {
     shop.add(prob, function () { return require('./problems/' + prob) });
 });
