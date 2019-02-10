@@ -1,0 +1,10 @@
+Write a program that gets the primary email address.
+
+Here is some boilerplate code to get you started:
+
+  module.exports = function (grav) {
+    grav.autoParse = true;
+    // ...
+  }
+
+Use `$ADVENTURE_COMMAND verify PROGRAM.js` to verify your program.

@@ -1,19 +1,28 @@
 {
-  "name": "example-adventure",
+  "name": "grav.learn",
   "version": "0.0.1",
-  "description": "example of using adventure to make nodeschool challenges",
-  "bin": {
-    "example-adventure": "runner.js"
+  "description": "an intro to grav.client via a set of self-guided workshops",
+  "scripts": {
+    "start": "node runner.js"
   },
-  "author": "YOUR NAME HERE",
+  "bin": {
+    "grav.learn": "runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrtillman/grav.learn.git"
+  },
+  "author": "mrtillman",
   "license": "MIT",
   "keywords": [
-    "nodeschool",
-    "adventure",
+    "grav",
+    "learn",
+    "tutorial",
     "education"
   ],
   "dependencies": {
     "adventure": "^2.2.0",
-    "adventure-verify": "^2.1.1"
+    "adventure-verify": "^2.1.1",
+    "grav.client": "^2.1.5"
   }
 }

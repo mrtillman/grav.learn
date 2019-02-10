@@ -1,7 +1,11 @@
-# example-adventure
+# grav.learn
 
-This package is an example that you can use to get started writing
-[nodeschool](http://nodeschool.io) challenges using
-[adventure](https://npmjs.org/package/adventure).
+an intro to grav.client via a set of self-guided workshops
 
-Just fork this repo to start building your very own nodeschool adventure!
+---
+
+```sh
+npm install -g grav.learn
+
+grav.learn verify PROGRAM.js
+```
