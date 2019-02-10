@@ -1,4 +1,4 @@
-Write a program that pings the Gravatar API.
+Write a program that uses an image url to create a new gravatar icon.
 
 Here is some boilerplate code to get you started:
 

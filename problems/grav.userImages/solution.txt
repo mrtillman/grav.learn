@@ -5,6 +5,6 @@ Here is the reference solution, if you're curious:
   module.exports = function () {
     const grav = Grav.login("user@example.com", "password");
     grav.autoParse = true;
-    return grav.test();
+    return grav.userImages();
   }
 
