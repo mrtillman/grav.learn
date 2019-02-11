@@ -1,6 +1,6 @@
 # grav.learn
 
-an intro to grav.client via a set of self-guided workshops
+an intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of self-guided workshops
 
 ---
 
