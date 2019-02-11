@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const verify = require('adventure-verify');
-const { TestParser, ParseContext } = require('grav.client');
+const { SaveUrlParser, ParseContext } = require('grav.client');
 
 exports.problem = fs.createReadStream(__dirname + '/problem.txt');
 exports.solution = fs.createReadStream(__dirname + '/solution.txt');
@@ -12,11 +12,11 @@ exports.verify = verify({ modeReset: true }, function (args, t) {
     f().then(data => {
         let res = data;
         if(typeof data == 'string'){
-            const testParser = new TestParser();
+            const testParser = new SaveUrlParser();
             const context = new ParseContext(testParser);
             res = context.parse(data);
         }
-        t.equal(true, Boolean(res.response), 'got a response')
+        t.equal(true, Boolean(res.imageName), 'saved new image')
         t.end();
     });
 });

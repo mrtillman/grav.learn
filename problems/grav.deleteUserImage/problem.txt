@@ -1,10 +1,12 @@
-Write a program that pings the Gravatar API.
+Write a program that deletes a gravatar image from the account.
+HINT: first, you will need to get one of the gravatar images on this account.
 
 Here is some boilerplate code to get you started:
 
   const { Grav } = require('grav.client');
 
   module.exports = function () {
+    const imageName = "imageName";
     const grav = Grav.login("user@example.com", "password");
     // ...
   }

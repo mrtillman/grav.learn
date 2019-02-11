@@ -1,4 +1,4 @@
-Write a program that pings the Gravatar API.
+Write a program that gets all email addresses in the account.
 
 Here is some boilerplate code to get you started:
 
