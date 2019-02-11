@@ -15,3 +15,6 @@ grav.learn verify PROGRAM.js
 ```
 
 ![grav.learn solution](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/solution.png)
+
+## License
+[MIT](https://github.com/mrtillman/grav.learn/blob/dev/LICENSE.md)
