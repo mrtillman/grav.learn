@@ -13,9 +13,9 @@ npm install -g grav.learn
 ```sh
 grav.learn
 ```
-![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/menu.png)
+![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challengeMenu.png)
 
-![grav.learn challenge](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge.png)
+![grav.learn challenge](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challengeText.png)
 ```sh
 grav.learn verify PROGRAM.js
 ```
