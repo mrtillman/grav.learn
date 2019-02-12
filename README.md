@@ -15,6 +15,7 @@ grav.learn
 ```
 ![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/menu.png)
 
+![grav.learn challenge](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge.png)
 ```sh
 grav.learn verify PROGRAM.js
 ```

@@ -1,0 +1,12 @@
+Write a program that replaces the primary avatar with the Gravatar logo.
+
+Here is some boilerplate code to get you started:
+
+  const { Grav } = require('grav.client');
+
+  module.exports = function () {
+    const grav = Grav.login("user@example.com", "password");
+    // ...
+  }
+
+Use `$ADVENTURE_COMMAND verify PROGRAM.js` to verify your program.
