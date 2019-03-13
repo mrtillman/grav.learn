@@ -16,6 +16,7 @@ exports.verify = verify({ modeReset: true }, function (args, t) {
             const context = new ParseContext(addressParser);
             res = context.parse(data);
         }
+        if(Array.isArray(res)) res = res[0];
         t.equal(true, Boolean(res.email), 'got email')
         t.equal(true, Boolean(res.rating), 'got rating');
         t.equal(true, Boolean(res.userimage), 'got userimage');
