@@ -23,6 +23,6 @@
   "dependencies": {
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
-    "grav.client": "^2.1.8"
+    "grav.client": "^2.1.9"
   }
 }
