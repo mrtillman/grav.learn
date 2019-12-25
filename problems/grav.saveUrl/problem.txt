@@ -2,10 +2,10 @@ Write a program that uses an image url to create a new gravatar icon.
 
 Here is some boilerplate code to get you started:
 
-  const { Grav } = require('grav.client');
+  const { GravatarClient } = require('grav.client');
 
   module.exports = function () {
-    const grav = Grav.login("user@example.com", "password");
+    const client = new GravatarClient("user@example.com", "password");
     // ...
   }
 

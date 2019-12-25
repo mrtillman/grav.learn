@@ -7,12 +7,12 @@ https://github.com/mrtillman/grav.client/blob/master/examples/grav.saveEncodedIm
 
 Here is some boilerplate code to get you started:
 
-  const { Grav } = require('grav.client');
+  const { GravatarClient } = require('grav.client');
   const fs = require('fs');
 
   module.exports = function () {
     const image = "/path/to/file.png";
-    const grav = Grav.login("user@example.com", "password");
+    const client = new GravatarClient("user@example.com", "password");
     // ...
   }
 

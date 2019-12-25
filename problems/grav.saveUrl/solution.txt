@@ -1,11 +1,11 @@
 Here is the reference solution, if you're curious:
 
-  const { Grav } = require('grav.client');
+  const { GravatarClient } = require('grav.client');
 
   module.exports = function () {
-    const grav = Grav.login("user@example.com", "password");
-    grav.autoParse = true;
+    const client = new GravatarClient("user@example.com", "password");
+    
     const imageUrl = "https://via.placeholder.com/150";
-    return grav.saveUrl(imageUrl);
+    return client.saveUrl(imageUrl);
   }
 

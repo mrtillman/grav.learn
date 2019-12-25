@@ -1,6 +1,6 @@
 Here is the reference solution, if you're curious:
 
-  const { Grav } = require('grav.client');
+  const { GravatarClient } = require('grav.client');
   const fs = require('fs');
 
   module.exports = function () {
@@ -8,8 +8,8 @@ Here is the reference solution, if you're curious:
     const bitmap = fs.readFileSync(image);
     const imageData = new Buffer(bitmap).toString('base64');
 
-    const grav = Grav.login("user@example.com", "password");
-    grav.autoParse = true;
-    return grav.saveEncodedImage(imageData, 'jpeg', 0);
+    const client = new GravatarClient("user@example.com", "password");
+    
+    return client.saveEncodedImage(imageData, 'jpeg', 0);
   }
   
