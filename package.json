@@ -23,6 +23,12 @@
   "dependencies": {
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
-    "grav.client": "^2.1.6"
+    "grav.client": "^2.1.6",
+    "lodash": ">=4.17.12",
+    "minimatch": ">=3.0.2"
+  },
+  "devDependencies": {
+    "lodash": ">=4.17.12",
+    "minimatch": ">=3.0.2"
   }
 }
