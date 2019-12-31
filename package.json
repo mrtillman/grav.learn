@@ -25,7 +25,8 @@
     "adventure-verify": "^2.1.1",
     "grav.client": "file:../grav.client",
     "lodash": ">=4.17.12",
-    "minimatch": ">=3.0.2"
+    "minimatch": ">=3.0.2",
+    "sinon": "^8.0.2"
   },
   "devDependencies": {
     "lodash": ">=4.17.12",
