@@ -1,7 +1,10 @@
 const { GravatarClient } = require('grav.client');
-const creds = require('../creds');
 
-module.exports = function () {
-  const client = new GravatarClient(creds.email, creds.password);
-  return client.exists();
+module.exports = async function (client) {
+  const result = await client.exists();
+  let exists = result.Value.exists[client.emailHash];
+  if(exists){
+    await client.removeImage();
+    exists = await client.exists();
+  }
 }

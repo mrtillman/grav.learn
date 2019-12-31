@@ -1,12 +1,10 @@
 Here is the reference solution, if you're curious:
-
-  const { GravatarClient } = require('grav.client');
-
-  module.exports = function () {
-    const client = new GravatarClient("user@example.com", "password");
-    return client.exists();
+  
+  module.exports = async function (client) {
+    const result = await client.exists();
+    let exists = result.Value.exists[client.emailHash];
+    if(exists){
+      await client.removeImage();
+      exists = await client.exists();
+    }
   }
-
-If there are multiple email addresses associated with your Gravatar account, the solution below is also correct:
-
-  return client.exists(email1, email2);
