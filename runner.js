@@ -1,11 +1,9 @@
-#!/usr/bin/env node
-
 const adventure = require('adventure');
 const shop = adventure('grav.learn');
 
 const problems = [ 
-    { title:'IMAGE CHECK', name:'image-check' },
-    { title:'DEFAULT ICON', name:'default-icon' },
+    { title:'CHECK PRIMARY IMAGE', name:'check-primary-image' },
+    { title:'SET DEFAULT ICON', name:'set-default-icon' },
 ];
 
 problems.forEach(function (prob) {
