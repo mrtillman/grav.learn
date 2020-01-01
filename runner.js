@@ -4,7 +4,8 @@ const adventure = require('adventure');
 const shop = adventure('grav.learn');
 
 const problems = [ 
-    { title:'IMAGE CHECK', name:'image-check' }
+    { title:'IMAGE CHECK', name:'image-check' },
+    { title:'DEFAULT ICON', name:'default-icon' },
 ];
 
 problems.forEach(function (prob) {

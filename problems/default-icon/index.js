@@ -1,0 +1,21 @@
+const sinon = require('sinon');
+const fs = require('fs');
+const path = require('path');
+const verify = require('adventure-verify');
+const { GravatarClient } = require('grav.client');
+const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs');
+
+exports.problem = fs.createReadStream(__dirname + '/problem.txt');
+exports.solution = fs.createReadStream(__dirname + '/solution.txt');
+
+exports.verify = verify({ modeReset: true }, async function (args, test) {
+    const solutionFilePath = args[0];
+    const solution = require(path.resolve(solutionFilePath));
+    test.equal(typeof solution, 'function', 'you exported a function');
+    const client = new GravatarClient();
+    const removeImageMethod = sinon.stub();
+    client.removeImage = removeImageMethod;
+    await solution(client);
+    test.equal(removeImageMethod.called, true, "you set the default icon");
+    test.end();
+});
