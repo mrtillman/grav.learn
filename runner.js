@@ -4,11 +4,11 @@ const adventure = require('adventure');
 const shop = adventure('grav.learn');
 
 const problems = [ 
-    'grav.exists'
+    { title:'IMAGE CHECK', name:'image-check' }
 ];
 
 problems.forEach(function (prob) {
-    shop.add(prob, function () { return require('./problems/' + prob) });
+    shop.add(prob.title, function () { return require('./problems/' + prob.name) });
 });
 
 shop.execute(process.argv.slice(2));
