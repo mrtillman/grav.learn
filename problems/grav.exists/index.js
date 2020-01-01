@@ -10,11 +10,8 @@ const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs
 function existsResult(useSuccess){
     const response = new ExistsMethodResponse("");
     response.json = stub.existsJsonResponse;
-    if(!useSuccess){
-        response.json.methodResponse.params.param
-        .value.struct.member.value.int._text = "0";
-    }
     response.parseMembers();
+    response.exists = useSuccess;
     return Promise.resolve(Result.Ok(response));
 }
 
@@ -33,17 +30,20 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
     const solution = require(path.resolve(solutionFilePath));
     test.equal(typeof solution, 'function', 'you exported a function');
     const client = new GravatarClient();
-    client.emailHash = "1a9e97710a2477b1040d332e9e815cca";
     const existsMethod = sinon.stub();
+    const existsResponse = await existsResult(true);
+    const existsProperty = sinon.spy(existsResponse.Value, "exists", ["get"]);
     const removeImageMethod = sinon.stub();
-    existsMethod.onFirstCall().returns(existsResult(true));
+    existsMethod.onFirstCall().returns(Promise.resolve(existsResponse));
     existsMethod.onSecondCall().returns(existsResult(false));
     removeImageMethod.onFirstCall().returns(removeImageResult());
     client.exists = existsMethod;
     client.removeImage = removeImageMethod;
     await solution(client);
-    test.equal(existsMethod.calledBefore(removeImageMethod), true, "you checked if the primary image exists");
-    test.equal(removeImageMethod.called, true, "you removed the primary image");
-    test.equal(existsMethod.calledAfter(removeImageMethod), true, "you checked if the primary image exists again");
+    let calledExists = existsMethod.calledBefore(removeImageMethod);
+    let checkedExistsField = existsProperty.get.calledBefore(removeImageMethod);
+    test.equal((calledExists && checkedExistsField), true, "you checked the primary image");
+    test.equal(removeImageMethod.calledAfter(existsMethod), true, "you removed the primary image");
+    test.equal(existsMethod.calledAfter(removeImageMethod), true, "you checked the primary image again");
     test.end();
 });
