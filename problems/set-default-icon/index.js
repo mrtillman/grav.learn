@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const verify = require('adventure-verify');
 const { GravatarClient } = require('grav.client');
-const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs');
 
 exports.problem = fs.createReadStream(__dirname + '/problem.txt');
 exports.solution = fs.createReadStream(__dirname + '/solution.txt');

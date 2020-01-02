@@ -3,6 +3,7 @@ const shop = adventure('grav.learn');
 
 const problems = [ 
     { title:'CHECK PRIMARY IMAGE', name:'check-primary-image' },
+    { title:'GET ACCOUNT EMAIL ADDRESSES', name:'get-account-email-addresses' },
     { title:'SET DEFAULT ICON', name:'set-default-icon' },
 ];
 
