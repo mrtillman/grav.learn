@@ -1,7 +1,7 @@
 const sinon = require('sinon');
 const ProblemTypes = require('../problems/problem-types');
 const { GravatarClient } = require('grav.client');
-const { existsResult, removeImageResult } = require('./results');
+const { existsResult, removeImageResult } = require('./result-stubs');
 
 const newClient = () => new GravatarClient();
 
