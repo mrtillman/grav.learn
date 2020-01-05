@@ -1,6 +1,5 @@
 const sinon = require('sinon');
 const { GravatarClient } = require('grav.client');
-const { Result } = require('grav.client/Release/Common/result');
 const { addressesResult, userAddresses } = require('./result-stubs');
 
 module.exports.client = async () => {

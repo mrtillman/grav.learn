@@ -5,11 +5,11 @@ const { existsResult, removeImageResult } = require('./result-stubs');
 module.exports.client = async () => {
   const client = new GravatarClient();
   const existsMethod = sinon.stub();
-  const existsResponse = await existsResult(true);
-  const existsProperty = sinon.spy(existsResponse.Value, "exists", ["get"]);
+  const result = await existsResult(true);
+  const existsProperty = sinon.spy(result.Value, "exists", ["get"]);
   const removeImageMethod = sinon.stub();
   
-  existsMethod.onFirstCall().returns(Promise.resolve(existsResponse));
+  existsMethod.onFirstCall().returns(Promise.resolve(result));
   existsMethod.onSecondCall().returns(existsResult(false));
   removeImageMethod.onFirstCall().returns(removeImageResult());
   client.exists = existsMethod;
