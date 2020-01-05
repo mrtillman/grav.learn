@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const verify = require('adventure-verify');
-const { mockClient } = require('../../mock-factory');
+const { mockClient } = require('../../test-doubles/mock-factory');
 const ProblemTypes =require('../problem-types');
 
 exports.problem = fs.createReadStream(__dirname + '/problem.txt');
