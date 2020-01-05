@@ -1,5 +1,5 @@
 module.exports = {
   CheckPrimaryImage: 0,
-  GetAccountEmailAddresses: 1,
-  SetDefaultIcon: 2
+  GetEmailAddresses: 1,
+  FindImages: 2
 };
