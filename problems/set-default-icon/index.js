@@ -13,6 +13,8 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
     const client = new GravatarClient();
     const removeImageMethod = sinon.stub();
     client.removeImage = removeImageMethod;
+    client.saveImageUrl = sinon.stub();
+    client.useUserImage = sinon.stub();
     await solution(client);
     test.equal(typeof solution, 'function', 'you exported an async function');
     test.equal(removeImageMethod.called, true, "you set the default icon");
