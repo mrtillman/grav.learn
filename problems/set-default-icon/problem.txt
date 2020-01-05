@@ -1,6 +1,7 @@
 Use the client to set the primary image to the default icon.
 
-Hint: This is a trick question. The default icon is identical to https://www.gravatar.com/avatar/0.
+Note: This is a trick question.
+Hint: The default icon is identical to https://www.gravatar.com/avatar/0.
 
 Here is some boilerplate code to get you started:
 
