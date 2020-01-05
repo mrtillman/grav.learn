@@ -10,7 +10,7 @@ exports.solution = fs.createReadStream(__dirname + '/solution.txt');
 exports.verify = verify({ modeReset: true }, async function (args, test) {
     const solutionFilePath = args[0];
     const solution = require(path.resolve(solutionFilePath));
-    const { client } = await mockClient(ProblemTypes.CheckPrimaryImage);
+    const client = await mockClient(ProblemTypes.CheckPrimaryImage);
     await solution(client);
     test.equal(typeof solution, 'function', 'you exported an async function');
     test.equal(client.didCheckPrimaryImage(), true, "you checked if the primary image exists");
