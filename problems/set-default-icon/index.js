@@ -14,7 +14,7 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
     const removeImageMethod = sinon.stub();
     client.removeImage = removeImageMethod;
     await solution(client);
-    test.equal(typeof solution, 'function', 'you exported a function');
+    test.equal(typeof solution, 'function', 'you exported an async function');
     test.equal(removeImageMethod.called, true, "you set the default icon");
     test.end();
 });
