@@ -2,10 +2,11 @@ const adventure = require('adventure');
 const shop = adventure('grav.learn');
 
 const problems = [ 
-    { title:'CHECK PRIMARY IMAGE', name:'check-primary-image' },
-    { title:'GET EMAIL ADDRESSES', name:'get-email-addresses' },
-    { title: 'FIND IMAGES', name:'find-images'},
-    { title:'SET DEFAULT ICON', name:'set-default-icon' },
+    { title: 'CHECK PRIMARY IMAGE', name: 'check-primary-image' },
+    { title: 'GET EMAIL ADDRESSES', name: 'get-email-addresses' },
+    { title: 'FIND IMAGES', name: 'find-images' },
+    { title: 'UPLOAD X-RATED IMAGE', name: 'x-rated-image' },
+    { title: 'SET DEFAULT ICON', name: 'set-default-icon' },
 ];
 
 problems.forEach(function (prob) {
