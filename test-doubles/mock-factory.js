@@ -10,6 +10,8 @@ module.exports.mockClient = async (problemType) => {
       return await require('./find-images').client();
     case ProblemTypes.XRatedImage:
       return await require('./x-rated-image').client();
+    case ProblemTypes.NewPrimary:
+      return await require('./new-primary').client();
     default:
       break;
   }

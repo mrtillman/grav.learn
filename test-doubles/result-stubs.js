@@ -6,7 +6,8 @@ const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs
 const { 
   AddressesMethodResponse, ExistsMethodResponse, 
   RemoveImageMethodResponse, UserImagesMethodResponse,
-  SaveImageUrlMethodResponse, DeleteUserImageMethodResponse
+  SaveImageUrlMethodResponse, DeleteUserImageMethodResponse,
+  UseUserImageMethodResponse
 } = require('grav.client/Release/Domain/method-responses');
 
 module.exports.existsResult = (useSuccess) => {
@@ -62,6 +63,12 @@ module.exports.saveImageUrlResult = () => {
 
 module.exports.deleteUserImageResult = () => {
   const response = new DeleteUserImageMethodResponse("");
+  response.success = true;
+  return Promise.resolve(Result.Ok(response));
+}
+
+module.exports.useUserImageResult = () => {
+  const response = new UseUserImageMethodResponse("")
   response.success = true;
   return Promise.resolve(Result.Ok(response));
 }
