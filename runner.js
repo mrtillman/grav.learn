@@ -6,6 +6,7 @@ const problems = [
     { title: 'GET EMAIL ADDRESSES', name: 'get-email-addresses' },
     { title: 'FIND IMAGES', name: 'find-images' },
     { title: 'UPLOAD X-RATED IMAGE', name: 'x-rated-image' },
+    { title: 'SET NEW PRIMARY IMAGE', name: 'new-primary' },
     { title: 'SET DEFAULT ICON', name: 'set-default-icon' },
 ];
 

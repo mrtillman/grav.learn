@@ -3,4 +3,5 @@ module.exports = {
   GetEmailAddresses: 1,
   FindImages: 2,
   XRatedImage: 3,
+  NewPrimary: 4,
 };
