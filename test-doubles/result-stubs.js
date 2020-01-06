@@ -1,10 +1,12 @@
 const { Result } = require('grav.client/Release/Common/result');
-const { ImageRating } = require('grav.client/Release/Domain/image-rating')
+const { ImageRating } = require('grav.client/Release/Domain/image-rating');
+const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs');
 
 const { 
   AddressesMethodResponse, ExistsMethodResponse, 
   RemoveImageMethodResponse, UserImagesMethodResponse,
+  SaveImageUrlMethodResponse, DeleteUserImageMethodResponse
 } = require('grav.client/Release/Domain/method-responses');
 
 module.exports.existsResult = (useSuccess) => {
@@ -51,3 +53,15 @@ module.exports.userImagesResult = () => {
 }
 
 module.exports.userImages = userImages;
+
+module.exports.saveImageUrlResult = () => {
+  const response = new SaveImageUrlMethodResponse("");
+  response.imageName = imageName;
+  return Promise.resolve(Result.Ok(response));
+}
+
+module.exports.deleteUserImageResult = () => {
+  const response = new DeleteUserImageMethodResponse("");
+  response.success = true;
+  return Promise.resolve(Result.Ok(response));
+}
