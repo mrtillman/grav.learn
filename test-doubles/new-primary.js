@@ -36,7 +36,8 @@ module.exports.client = async () => {
   );
 
   client.didGetPrimaryImageUrl = (answer) => (
-    answer.primaryImageUrl == userAddresses.find(
+    addressesMethod.calledAfter(client.useUserImage)
+    && answer.primaryImageUrl == userAddresses.find(
       address => address.email == client.email
     ).imageUrl
   );
