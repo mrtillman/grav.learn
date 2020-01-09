@@ -1,0 +1,15 @@
+Use the client to load the next image.
+Hint: apply a use case
+
+Here is some boilerplate code to get you started:
+
+  module.exports = async function (client) {
+    
+    // ...
+
+    return {
+      nextImageName: ""
+    };
+  }
+
+Use `$ADVENTURE_COMMAND verify PROGRAM.js` to verify your program.

@@ -1,0 +1,10 @@
+Here is the reference solution, if you're curious:
+
+  module.exports = async function (client) {
+    var useCase = new LoadPreviousImageUseCase();
+    useCase.client = client;
+    return {
+      previousImageName: await useCase.execute()
+    };
+  }
+

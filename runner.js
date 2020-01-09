@@ -7,7 +7,9 @@ const problems = [
     { title: 'FIND IMAGES', name: 'find-images' },
     { title: 'UPLOAD X-RATED IMAGE', name: 'x-rated-image' },
     { title: 'SET NEW PRIMARY IMAGE', name: 'new-primary' },
-    { title: 'SET DEFAULT ICON', name: 'set-default-icon' },
+    { title: 'LOAD PREVIOUS IMAGE', name: 'load-previous-image' },
+    { title: 'LOAD NEXT IMAGE', name: 'load-next-image' },
+    { title: 'SET DEFAULT ICON', name: 'set-default-icon' }
 ];
 
 problems.forEach(function (prob) {
