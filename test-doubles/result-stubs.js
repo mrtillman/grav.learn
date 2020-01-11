@@ -43,8 +43,8 @@ const userImages = [
   { name:'alpha', rating: ImageRating.PG, url: 'https://images.example.com/alpha' },
   { name:'bravo', rating: ImageRating.G, url: 'https://images.example.com/bravo' },
   { name:'charlie', rating: ImageRating.G, url: 'https://images.example.com/charlie' },
-  { name:'echo', rating: ImageRating.PG, url: 'https://images.example.com/echo' },
-  { name:'delta', rating: ImageRating.G, url: 'https://images.example.com/delta' }
+  { name:'delta', rating: ImageRating.G, url: 'https://images.example.com/delta' },
+  { name:'echo', rating: ImageRating.PG, url: 'https://images.example.com/echo' }
 ];
 
 module.exports.userImagesResult = () => {
