@@ -13,14 +13,14 @@ npm install -g grav.learn
 ```sh
 grav.learn
 ```
-![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challengeMenu.png)
+![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/challenge-menu.png)
 
-![grav.learn challenge](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challengeText.png)
+![grav.learn challenge](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/challenge-preview.png)
 ```sh
 grav.learn verify PROGRAM.js
 ```
 
-![grav.learn solution](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/solution.png)
+![grav.learn solution](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/solution-preview.png)
 
 ## License
 [MIT](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
