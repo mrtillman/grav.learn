@@ -4,7 +4,7 @@ An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of
 
 ---
 
-[![npm version](https://badge.fury.io/js/grav.learn.svg)](https://badge.fury.io/js/grav.learn)
+[![npm version](https://badge.fury.io/js/grav.learn.svg)](https://www.npmjs.com/package/grav.learn)
 
 ## Getting Started
 
