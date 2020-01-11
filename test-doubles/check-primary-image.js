@@ -6,7 +6,7 @@ module.exports.client = async () => {
   const client = new GravatarClient();
   const existsMethod = sinon.stub();
   const result = await existsResult(true);
-  const existsProperty = sinon.spy(result.Value, "exists", ["get"]);
+  const existsProperty = sinon.spy(result.Value, "success", ["get"]);
   const removeImageMethod = sinon.stub();
   
   existsMethod.onFirstCall().returns(Promise.resolve(result));

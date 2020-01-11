@@ -2,10 +2,10 @@ Here is the reference solution, if you're curious:
   
   module.exports = async function (client) {
     let result = await client.exists();
-    let { exists } = result.Value;
-    while(exists){
+    let { success } = result.Value;
+    while(success){
       await client.removeImage();
       result = await client.exists();
-      exists = result.Value.exists;
+      success = result.Value.success;
     }
   }

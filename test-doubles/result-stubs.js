@@ -14,7 +14,7 @@ module.exports.existsResult = (useSuccess) => {
   const response = new ExistsMethodResponse("");
   response.json = stub.existsJsonResponse;
   response.parseMembers();
-  response.exists = useSuccess;
+  response.success = useSuccess;
   return Promise.resolve(Result.Ok(response));
 }
 
