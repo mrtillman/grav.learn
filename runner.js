@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const adventure = require('adventure');
 const shop = adventure('grav.learn');
 
