@@ -1,0 +1,15 @@
+Use the client to upload an image, then set it as primary.
+Finally, get the primary image url.
+
+Here is some boilerplate code to get you started:
+
+  module.exports = async function (client) {
+    
+    // ...
+
+    return {
+      primaryImageName: ""
+    }
+  }
+
+Use `$ADVENTURE_COMMAND verify PROGRAM.js` to verify your program.

@@ -1,6 +1,6 @@
 {
   "name": "grav.learn",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "an intro to grav.client via a set of self-guided workshops",
   "scripts": {
     "start": "node runner.js"
@@ -21,11 +21,13 @@
     "education"
   ],
   "dependencies": {
+    "@types/jest": "^24.0.25",
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
-    "grav.client": "^2.1.9",
+    "grav.client": "^2.2.4",
     "lodash": ">=4.17.12",
-    "minimatch": ">=3.0.2"
+    "minimatch": ">=3.0.2",
+    "sinon": "^8.0.2"
   },
   "devDependencies": {
     "lodash": ">=4.17.12",
