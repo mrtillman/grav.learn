@@ -10,7 +10,7 @@ An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of
 
 **`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://github.com/mrtillman/grav.client) library.
 
-![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/challenge-menu.png)
+![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge-menu.png)
 
 ## Installation
 
@@ -26,11 +26,11 @@ To test that grav.learn has been installed successfully, run the command `grav.l
 
 Each exercise presents a challenge and some starter code.
 
-![challenge preview](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/challenge-preview.png)
+![challenge preview](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge-preview.png)
 
 To complete the exercise, write a program to solve the challenge.
 
-![solution preview](https://raw.githubusercontent.com/mrtillman/grav.learn/dev/assets/solution-preview.png)
+![solution preview](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/solution-preview.png)
 
 ## License
 [MIT](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
