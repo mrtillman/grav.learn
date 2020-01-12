@@ -1,6 +1,8 @@
 Use the client to load the previous image.
 Hint: apply a use case
 
+https://github.com/mrtillman/grav.client/wiki/Use-Cases
+
 Here is some boilerplate code to get you started:
 
   module.exports = async function (client) {
