@@ -6,7 +6,7 @@
     "start": "node runner.js"
   },
   "bin": {
-    "grav.learn": "runner.js"
+    "grav.learn": "node runner.js"
   },
   "repository": {
     "type": "git",
