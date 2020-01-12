@@ -1,12 +1,12 @@
 {
   "name": "grav.learn",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "an intro to grav.client via a set of self-guided workshops",
   "scripts": {
     "start": "node runner.js"
   },
   "bin": {
-    "grav.learn": "node runner.js"
+    "grav.learn": "./runner.js"
   },
   "repository": {
     "type": "git",
