@@ -1,6 +1,6 @@
 {
   "name": "grav.learn",
-  "version": "3.0.0",
+  "version": "2.1.8",
   "description": "an intro to grav.client via a set of self-guided workshops",
   "scripts": {
     "start": "node runner.js"

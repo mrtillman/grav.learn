@@ -5,6 +5,8 @@ An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of
 ---
 
 [![npm version](https://badge.fury.io/js/grav.learn.svg)](https://www.npmjs.com/package/grav.learn)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/mrtillman/grav.client?sort=semver)](https://github.com/mrtillman/grav.learn/releases/tag/v2.1.8)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
 
 ## Getting Started
 
