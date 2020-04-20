@@ -18,6 +18,8 @@ module.exports.mockClient = async (problemType) => {
       return await require('./load-previous-image').client();
     case ProblemTypes.NextImage:
       return await require('./load-next-image').client();
+    case ProblemTypes.CreateUseCase:
+      return await require('./create-use-case').client();
     default:
       break;
   }

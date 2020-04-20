@@ -6,5 +6,6 @@ module.exports = {
   XRatedImage: 4,
   NewPrimary: 5,
   PreviousImage: 6,
-  NextImage: 7
+  NextImage: 7,
+  CreateUseCase: 8
 };
