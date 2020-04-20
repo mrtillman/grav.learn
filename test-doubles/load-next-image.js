@@ -3,7 +3,6 @@ const { GravatarClient } = require('grav.client');
 const {
   addressesResult,
   userAddresses,
-  userImages,
   userImagesResult,
   useUserImageResult  
 } = require('./result-stubs');
@@ -35,7 +34,7 @@ module.exports.client = async () => {
     userImagesProperty.get.called
   );
   client.didSetNextImage = (answer) => (
-    client.useUserImage.called
+    client.useUserImage.called && typeof answer.nextImageName == "string"
   );
 
   return client;
