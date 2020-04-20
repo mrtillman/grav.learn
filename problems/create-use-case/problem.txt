@@ -1,6 +1,6 @@
-Create a use case to get the user address.
+Create a use case to get the user address object.
 
-Hint: review your solution to challenge 5, SET NEW PRIMARY IMAGE.
+Hint: Review your solution to challenge 5, SET NEW PRIMARY IMAGE.
 
 Also, see https://github.com/mrtillman/grav.client/wiki/Use-Cases.
 
