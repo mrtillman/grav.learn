@@ -7,6 +7,7 @@ const problems = [
     { title: 'CHECK PRIMARY IMAGE', name: 'check-primary-image' },
     { title: 'GET EMAIL ADDRESSES', name: 'get-email-addresses' },
     { title: 'FIND IMAGES', name: 'find-images' },
+    { title: 'FIND SINGLE IMAGE', name: 'find-single-image' },
     { title: 'UPLOAD X-RATED IMAGE', name: 'x-rated-image' },
     { title: 'SET NEW PRIMARY IMAGE', name: 'new-primary' },
     { title: 'LOAD PREVIOUS IMAGE', name: 'load-previous-image' },
