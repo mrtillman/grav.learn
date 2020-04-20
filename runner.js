@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const adventure = require('adventure');
-const shop = adventure('grav.learn');
+const shop = adventure({ name: 'grav.learn', autoclose: false });
 
 const problems = [ 
     { title: '0. CHECK PRIMARY IMAGE', name: 'check-primary-image' },
