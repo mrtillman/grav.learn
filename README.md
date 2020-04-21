@@ -1,16 +1,15 @@
 # grav.learn
 
-An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of self-guided workshops
+An intro to [grav.client](https://www.npmjs.com/package/grav.client) via a set of self-guided workshops
 
 ---
 
 [![npm version](https://badge.fury.io/js/grav.learn.svg)](https://www.npmjs.com/package/grav.learn)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/mrtillman/grav.client?sort=semver)](https://github.com/mrtillman/grav.learn/releases/tag/v2.1.8)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
 
 ## Getting Started
 
-**`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://github.com/mrtillman/grav.client) library.
+**`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://www.npmjs.com/package/grav.client) library.
 
 ![menu](https://grav-learn.surge.sh/menu.png)
 
