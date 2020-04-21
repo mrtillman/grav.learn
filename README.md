@@ -5,12 +5,14 @@ An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of
 ---
 
 [![npm version](https://badge.fury.io/js/grav.learn.svg)](https://www.npmjs.com/package/grav.learn)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/mrtillman/grav.client?sort=semver)](https://github.com/mrtillman/grav.learn/releases/tag/v2.1.8)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
 
 ## Getting Started
 
 **`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://github.com/mrtillman/grav.client) library.
 
-![grav.learn menu](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge-menu.png)
+![menu](https://grav-learn.surge.sh/menu.png)
 
 ## Installation
 
@@ -20,17 +22,13 @@ An intro to [grav.client](https://github.com/mrtillman/grav.client) via a set of
 
 ## Launching the Workshop
 
-To test that grav.learn has been installed successfully, run the command `grav.learn` in your terminal. This will start the grav.learn application, and you should see a blue menu similar to the one in the screenshot above.
+To test that the workshop has been installed successfully, run the command `grav.learn` in your terminal. This will start the grav.learn application, and you should see a blue menu similar to the one in the screenshot above.
 
 ## Usage
 
-Each exercise presents a challenge and some starter code.
+Each exercise presents a challenge and some starter code. To complete the exercise, write a program to solve the challenge.
 
-![challenge preview](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/challenge-preview.png)
-
-To complete the exercise, write a program to solve the challenge.
-
-![solution preview](https://raw.githubusercontent.com/mrtillman/grav.learn/master/assets/solution-preview.png)
+![workshop demo](https://grav-learn.surge.sh/demo.gif)
 
 ## License
 [MIT](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)

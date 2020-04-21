@@ -1,9 +1,10 @@
 const { LoadPreviousImageUseCase } = require('grav.client');
 
 module.exports = async function (client) {
-  var useCase = new LoadPreviousImageUseCase();
+  const useCase = new LoadPreviousImageUseCase();
   useCase.client = client;
+  const previousImage = await useCase.execute();
   return {
-    previousImageName: await useCase.execute()
+    previousImageName: previousImage.name
   };
 }
