@@ -24,7 +24,7 @@
     "@types/jest": "^24.0.25",
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
-    "grav.client": "file:../grav.client",
+    "grav.client": "^2.3.12",
     "sinon": "^8.0.2"
   },
   "devDependencies": {
