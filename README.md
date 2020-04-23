@@ -9,7 +9,7 @@ An intro to [grav.client](https://www.npmjs.com/package/grav.client) via a set o
 
 ## Getting Started
 
-**`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://www.npmjs.com/package/grav.client) library.
+**`grav.learn`** is a series of exercises which will teach you how to write programs using the [grav.client](https://www.npmjs.com/package/grav.client) library. Be sure to consult the [Wiki](https://github.com/mrtillman/grav.client/wiki).
 
 ![menu](https://grav-learn.surge.sh/menu.png)
 

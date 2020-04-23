@@ -8,7 +8,7 @@ Here is some boilerplate code to get you started:
     // ...
 
     return {
-      primaryImageName: ""
+      primaryImageUrl: ""
     }
   }
 
