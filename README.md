@@ -29,7 +29,7 @@ To test that the workshop has been installed successfully, run the command `grav
 
 Each exercise presents a challenge and some starter code. To complete the exercise, write a program to solve the challenge.
 
-![workshop demo](https://grav-learn.surge.sh/demo.gif)
+![workshop preview](https://grav-learn.surge.sh/preview.gif)
 
 ## License
 [MIT](https://github.com/mrtillman/grav.learn/blob/master/LICENSE.md)
