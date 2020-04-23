@@ -4,10 +4,11 @@ const { password } = require('grav.client/Release/Common/TestDoubles/primitive-s
 const { 
   addressesResult, userAddresses
 } = require('./result-stubs');
+const client = require('./mock-client');
+const address = userAddresses[2];
+client.email = address.email;
 
 module.exports.client = async () => {
-  const address = userAddresses[2];
-  const client = new GravatarClient(address.email, password);
 
   const addressesMethod = sinon.stub();
   const result = await addressesResult();

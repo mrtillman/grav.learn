@@ -2,7 +2,7 @@ const sinon = require('sinon');
 const fs = require('fs');
 const path = require('path');
 const verify = require('adventure-verify');
-const { GravatarClient } = require('grav.client');
+const client = require("../../test-doubles/mock-client");
 
 exports.problem = fs.createReadStream(__dirname + '/problem.txt');
 exports.solution = fs.createReadStream(__dirname + '/solution.txt');
@@ -10,7 +10,6 @@ exports.solution = fs.createReadStream(__dirname + '/solution.txt');
 exports.verify = verify({ modeReset: true }, async function (args, test) {
     const solutionFilePath = args[0];
     const solution = require(path.resolve(solutionFilePath));
-    const client = new GravatarClient();
     const removeImageMethod = sinon.stub();
     client.removeImage = removeImageMethod;
     client.saveImageUrl = sinon.stub();

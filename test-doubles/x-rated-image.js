@@ -5,9 +5,9 @@ const {
   saveImageUrlResult, 
   deleteUserImageResult
 } = require('./result-stubs');
+const client = require("./mock-client");
 
 module.exports.client = async () => {
-  const client = new GravatarClient();
   const saveImageUrlMethod = sinon.stub();
   const deleteUserImageMethod = sinon.stub();
 

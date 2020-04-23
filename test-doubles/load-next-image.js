@@ -1,14 +1,13 @@
 const sinon = require('sinon');
-const { GravatarClient } = require('grav.client');
 const {
   addressesResult,
   userAddresses,
   userImagesResult,
   useUserImageResult  
 } = require('./result-stubs');
+const client = require("./mock-client");
 
 module.exports.client = async () => {
-  const client = new GravatarClient();
   const addressesMethod = sinon.stub();
   const userImagesMethod = sinon.stub();
   const useUserImageMethod = sinon.stub();
@@ -34,6 +33,7 @@ module.exports.client = async () => {
     userImagesProperty.get.called
   );
   client.didSetNextImage = (answer) => (
+    answer && 
     client.useUserImage.called && typeof answer.nextImageName == "string"
   );
 
