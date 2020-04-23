@@ -1,3 +1,5 @@
+SET DEFAULT ICON (Exercise 8 of 9)
+
 Use the client to set the primary image to the default icon.
 
 Hint: The default icon is identical to https://www.gravatar.com/avatar/0.

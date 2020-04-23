@@ -1,4 +1,7 @@
+LOAD PREVIOUS IMAGE (Exercise 6 of 9)
+
 Use the client to load the previous image.
+
 Hint: apply a use case
 
 https://github.com/mrtillman/grav.client/wiki/Use-Cases

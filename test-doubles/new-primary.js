@@ -1,15 +1,15 @@
 const sinon = require('sinon');
-const { GravatarClient } = require('grav.client');
-const { imageName, password } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
+const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const { 
   saveImageUrlResult,
   useUserImageResult,
   addressesResult, userAddresses
 } = require('./result-stubs');
+const { email } = userAddresses[0];
+const client = require('./mock-client');
+client.email = email;
 
 module.exports.client = async () => {
-  const { email } = userAddresses[0];
-  const client = new GravatarClient(email, password);
 
   const addressesMethod = sinon.stub();
   const saveImageUrlMethod = sinon.stub();

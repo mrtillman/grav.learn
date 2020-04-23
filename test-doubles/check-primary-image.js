@@ -1,9 +1,8 @@
 const sinon = require('sinon');
-const { GravatarClient } = require('grav.client');
 const { existsResult, removeImageResult } = require('./result-stubs');
+const client = require("./mock-client");
 
-module.exports.client = async () => {
-  const client = new GravatarClient();
+module.exports.client = async () => {  
   const existsMethod = sinon.stub();
   const result = await existsResult(true);
   const existsProperty = sinon.spy(result.Value, "success", ["get"]);

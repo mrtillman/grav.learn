@@ -1,9 +1,9 @@
 const sinon = require('sinon');
-const { GravatarClient, ImageRating } = require('grav.client');
-const { userImagesResult, userImages } = require('./result-stubs');
+const { ImageRating } = require('grav.client');
+const { userImagesResult } = require('./result-stubs');
+const client = require("./mock-client");
 
 module.exports.client = async () => {
-  const client = new GravatarClient();
   const userImagesMethod = sinon.stub();
   const result = await userImagesResult();
   const userImagesProperty = sinon.spy(result.Value, "userImages", ["get"]);
@@ -12,6 +12,7 @@ module.exports.client = async () => {
   client.userImages = userImagesMethod;
 
   client.didFindBravoImage = (answer) => (
+    answer && 
     client.userImages.called &&
     userImagesProperty.get.called &&
     answer.image.name == "bravo" &&
