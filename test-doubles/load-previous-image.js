@@ -1,5 +1,4 @@
 const sinon = require('sinon');
-const { GravatarClient } = require('grav.client');
 const {
   addressesResult,
   userAddresses,

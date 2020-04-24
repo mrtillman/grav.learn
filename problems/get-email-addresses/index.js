@@ -3,9 +3,10 @@ const path = require('path');
 const verify = require('adventure-verify');
 const { mockClient } = require('../../test-doubles/mock-factory');
 const ProblemTypes =require('../problem-types');
+const marked = require('../../theme');
 
-exports.problem = fs.createReadStream(__dirname + '/problem.txt');
-exports.solution = fs.createReadStream(__dirname + '/solution.txt');
+exports.problem = marked(fs.readFileSync(__dirname + '/problem.md').toString());
+exports.solution = marked(fs.readFileSync(__dirname + '/solution.md').toString());
 
 exports.verify = verify({ modeReset: true }, async function (args, test) {
     const solutionFilePath = args[0];

@@ -1,5 +1,0 @@
-Here is the reference solution, if you're curious:
-  
-  module.exports = async function (client) {
-    await client.removeImage();
-  }

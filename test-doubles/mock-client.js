@@ -1,9 +1,7 @@
 const sinon = require('sinon');
-const { email, password } = require("../node_modules/grav.client/Release/Common/TestDoubles/primitive-stubs")
 const stub = require("../node_modules/grav.client/Release/Common/TestDoubles/result-stubs");
 const { Result } = require("../node_modules/grav.client/Release/Common/result");
-const { GravatarClient } = require("grav.client");
-const client = new GravatarClient(email, password);
+const client = {};
 
 const existsMethod = sinon.stub();
 const addressesMethod = sinon.stub();
@@ -14,7 +12,7 @@ const removeImageMethod = sinon.stub();
 const deleteUserImageMethod = sinon.stub();
 const testMethod = sinon.stub();
 
-existsMethod.returns(stub.ExistsResult());
+existsMethod.returns(Result.Ok({success: false}));
 addressesMethod.returns(stub.AddressesResult());
 userImagesMethod.returns(stub.UserImagesResult());
 saveImageUrlMethod.returns(stub.SaveImageUrlResult());
@@ -23,6 +21,7 @@ removeImageMethod.returns(Result.Ok(false));
 deleteUserImageMethod.returns(Result.Ok(false));
 testMethod.returns(stub.TestResult());
 
+client.exists = existsMethod;
 client.addresses = addressesMethod;
 client.userImages = userImagesMethod;
 client.saveImage = saveImageUrlMethod;
