@@ -1,5 +1,5 @@
 const sinon = require('sinon');
-const { GravatarClient, ImageRating } = require('grav.client');
+const { ImageRating } = require('grav.client');
 const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const { 
   saveImageUrlResult, 

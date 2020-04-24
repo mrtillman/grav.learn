@@ -1,6 +1,4 @@
 const sinon = require('sinon');
-const { GravatarClient } = require('grav.client');
-const { password } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const { 
   addressesResult, userAddresses
 } = require('./result-stubs');
