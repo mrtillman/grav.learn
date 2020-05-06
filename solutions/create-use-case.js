@@ -5,8 +5,7 @@ module.exports = class GetUserAddressUseCase {
     this.client = new GravatarClient();
   }
   async execute(){
-    const addressesResponse = await this.client.addresses();
-    const { userAddresses } = addressesResponse.Value;
+    const { userAddresses } = await this.client.addresses();
     return userAddresses.find(
       address => address.email == this.client.email
     );

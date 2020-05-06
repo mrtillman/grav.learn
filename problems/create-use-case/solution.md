@@ -1,13 +1,14 @@
 Here is the reference solution, if you're curious:
 
 ```js
+const { GravatarClient } = require('grav.client');
+
 module.exports = class GetUserAddressUseCase {
   constructor(){
-    this.client = null;
+    this.client = new GravatarClient();
   }
   async execute(){
-    const addressesResponse = await this.client.addresses();
-    const { userAddresses } = addressesResponse.Value;
+    const { userAddresses } = await this.client.addresses();
     return userAddresses.find(
       address => address.email == this.client.email
     );

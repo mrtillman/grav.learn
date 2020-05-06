@@ -18,7 +18,7 @@ const { GravatarClient } = require('grav.client');
 
 module.exports = class GetUserAddressUseCase {
   constructor(){
-    this.client = new GravatarClient()l;
+    this.client = new GravatarClient();
   }
   execute(){
     // ...

@@ -38,7 +38,7 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
         return client.didFindUserAddress(response)
     }
 
-    test.equal(didReturnClass, true, 'you returned a class');
+    test.equal(didReturnClass, true, 'you exported a class');
     test.equal(didImplementUseCase(), true, 'you implemented a use case');
     test.equal(await didFindUserAddress(), true, "your use case found the user address");
     test.end();
