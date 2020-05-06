@@ -1,4 +1,3 @@
-const { Result } = require('grav.client/Release/Common/result');
 const { ImageRating } = require('grav.client/Release/Domain/image-rating');
 const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs');
@@ -10,19 +9,19 @@ const {
   UseUserImageMethodResponse
 } = require('grav.client/Release/Domain/method-responses');
 
-module.exports.existsResult = (useSuccess) => {
+module.exports.existsResponse = (useSuccess) => {
   const response = new ExistsMethodResponse("");
   response.json = stub.existsJsonResponse;
   response.parseMembers();
   response.success = useSuccess;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
-module.exports.removeImageResult = () => {
+module.exports.removeImageResponse = () => {
   const response = new RemoveImageMethodResponse("");
   response.json = stub.removeImageJsonResponse;
   response.parseMembers();
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
 const userAddresses = [
@@ -31,10 +30,10 @@ const userAddresses = [
   { imageRating:0, email: "buttercup@example.com", imageName: "0fa6e24a27f544abb2536746b5b9d5f0", imageUrl: "http://en.gravatar.com/userimage/000000/0fa6e24a27f544abb2536746b5b9d5f0" },
 ];
 
-module.exports.addressesResult = () => {
+module.exports.addressesResponse = () => {
   const response = new AddressesMethodResponse("");
   response.userAddresses = userAddresses;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
 module.exports.userAddresses = userAddresses;
@@ -47,28 +46,28 @@ const userImages = [
   { name:'echo', rating: ImageRating.PG, url: 'https://images.example.com/echo' }
 ];
 
-module.exports.userImagesResult = () => {
+module.exports.userImagesResponse = () => {
   const response = new UserImagesMethodResponse("");
   response.userImages = userImages;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
 module.exports.userImages = userImages;
 
-module.exports.saveImageUrlResult = () => {
+module.exports.saveImageUrlResponse = () => {
   const response = new SaveImageUrlMethodResponse("");
   response.imageName = imageName;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
-module.exports.deleteUserImageResult = () => {
+module.exports.deleteUserImageResponse = () => {
   const response = new DeleteUserImageMethodResponse("");
   response.success = true;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }
 
-module.exports.useUserImageResult = () => {
+module.exports.useUserImageResponse = () => {
   const response = new UseUserImageMethodResponse("")
   response.success = true;
-  return Promise.resolve(Result.Ok(response));
+  return Promise.resolve(response);
 }

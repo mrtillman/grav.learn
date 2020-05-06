@@ -1,6 +1,5 @@
 const sinon = require('sinon');
-const stub = require("../node_modules/grav.client/Release/Common/TestDoubles/result-stubs");
-const { Result } = require("../node_modules/grav.client/Release/Common/result");
+const stub = require("../node_modules/grav.client/Release/Common/TestDoubles/response-stubs");
 const client = {};
 
 const existsMethod = sinon.stub();
@@ -12,14 +11,14 @@ const removeImageMethod = sinon.stub();
 const deleteUserImageMethod = sinon.stub();
 const testMethod = sinon.stub();
 
-existsMethod.returns(Result.Ok({success: false}));
-addressesMethod.returns(stub.AddressesResult());
-userImagesMethod.returns(stub.UserImagesResult());
-saveImageUrlMethod.returns(stub.SaveImageUrlResult());
-useUserImageMethod.returns(stub.UseUserImageResult());
-removeImageMethod.returns(Result.Ok(false));
-deleteUserImageMethod.returns(Result.Ok(false));
-testMethod.returns(stub.TestResult());
+existsMethod.returns({success: false});
+addressesMethod.returns(stub.AddressesResponse());
+userImagesMethod.returns(stub.UserImagesResponse());
+saveImageUrlMethod.returns(stub.SaveImageUrlResponse());
+useUserImageMethod.returns(stub.UseUserImageResponse());
+removeImageMethod.returns(false);
+deleteUserImageMethod.returns(false);
+testMethod.returns(stub.TestResponse());
 
 client.exists = existsMethod;
 client.addresses = addressesMethod;
