@@ -1,11 +1,8 @@
-const { FindImageUseCase } = require('grav.client');
 const { GravatarClient } = require('grav.client');
 
 module.exports = async function (client = new GravatarClient()) {
-  const useCase = new FindImageUseCase();
-  useCase.client = client;
-  useCase.imageName = "bravo";
+  const { userImages } = await client.userImages();
   return {
-    image: await useCase.execute()
+    image: userImages.find(image => image.name == "bravo")
   };
 }
