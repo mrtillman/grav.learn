@@ -10,7 +10,9 @@ If a primary image is set, then remove it and check again.
 Here is some boilerplate code to get you started:
 
 ```js
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   // ...
 }
 ```
