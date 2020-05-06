@@ -4,8 +4,8 @@ Here is the reference solution, if you're curious:
 const { ImageRating } = require('grav.client');
 
 module.exports = async function (client) {
-  const result = await client.userImages();
-  const { userImages } = result.Value;
+  const response = await client.userImages();
+  const { userImages } = response;
   return {
     numberOfImages: userImages.length,
     numberOfPgRatedImages: userImages.filter(

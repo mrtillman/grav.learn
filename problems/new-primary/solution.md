@@ -3,10 +3,10 @@ Here is the reference solution, if you're curious:
 ```js
 module.exports = async function (client) {
   const imageUrl = "https://via.placeholder.com/150";
-  const saveImageResult = await client.saveImageUrl(imageUrl);
-  await client.useUserImage(saveImageResult.Value.imageName);
-  const addressesResult = await client.addresses();
-  const { userAddresses } = addressesResult.Value;
+  const saveImageResponse = await client.saveImageUrl(imageUrl);
+  await client.useUserImage(saveImageResponse.Value.imageName);
+  const addressesResponse = await client.addresses();
+  const { userAddresses } = addressesResponse.Value;
   return {
     primaryImageUrl: userAddresses.find(
       address => address.email == client.email
@@ -25,8 +25,8 @@ module.exports = async function (client) {
   setNewImage.client = client;
   setNewImage.imageUrl = "https://via.placeholder.com/150";
   await setNewImage.execute();
-  const addressesResult = await client.addresses();
-  const { userAddresses } = addressesResult.Value;
+  const addressesResponse = await client.addresses();
+  const { userAddresses } = addressesResponse.Value;
   return {
     primaryImageUrl: userAddresses.find(
       address => address.email == client.email

@@ -2,17 +2,17 @@ const sinon = require('sinon');
 const { ImageRating } = require('grav.client');
 const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const { 
-  saveImageUrlResult, 
-  deleteUserImageResult
-} = require('./result-stubs');
+  saveImageUrlResponse, 
+  deleteUserImageResponse
+} = require('./response-stubs');
 const client = require("./mock-client");
 
 module.exports.client = async () => {
   const saveImageUrlMethod = sinon.stub();
   const deleteUserImageMethod = sinon.stub();
 
-  saveImageUrlMethod.returns(saveImageUrlResult());
-  deleteUserImageMethod.returns(deleteUserImageResult());
+  saveImageUrlMethod.returns(saveImageUrlResponse());
+  deleteUserImageMethod.returns(deleteUserImageResponse());
 
   client.saveImage = saveImageUrlMethod;
   client.saveEncodedImage = saveImageUrlMethod;

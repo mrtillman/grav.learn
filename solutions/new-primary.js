@@ -2,10 +2,10 @@ const { GravatarClient } = require('grav.client');
 
 module.exports = async function (client = new GravatarClient()) {
   const imageUrl = "https://via.placeholder.com/150";
-  const saveImageResult = await client.saveImageUrl(imageUrl);
-  await client.useUserImage(saveImageResult.Value.imageName);
-  const addressesResult = await client.addresses();
-  const { userAddresses } = addressesResult.Value;
+  const saveImageResponse = await client.saveImageUrl(imageUrl);
+  await client.useUserImage(saveImageResponse.Value.imageName);
+  const addressesResponse = await client.addresses();
+  const { userAddresses } = addressesResponse.Value;
   return {
     primaryImageUrl: userAddresses.find(
       address => address.email == client.email

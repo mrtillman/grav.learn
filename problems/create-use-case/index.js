@@ -34,7 +34,7 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
         if(!didReturnClass || !useCase.execute) { return false }
         const client = await mockClient(ProblemTypes.CreateUseCase);
         useCase.client = client;
-        const result = await useCase.execute();
+        const response = await useCase.execute();
         return client.didFindUserAddress(result)
     }
 

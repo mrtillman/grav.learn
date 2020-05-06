@@ -1,11 +1,11 @@
 const sinon = require('sinon');
-const { addressesResult, userAddresses } = require('./result-stubs');
+const { addressesResponse, userAddresses } = require('./response-stubs');
 const client = require("./mock-client");
 
 module.exports.client = async () => {
   const addressesMethod = sinon.stub();
 
-  addressesMethod.returns(addressesResult());
+  addressesMethod.returns(addressesResponse());
   client.addresses = addressesMethod;
 
   client.didCountEmails = (answer) => (

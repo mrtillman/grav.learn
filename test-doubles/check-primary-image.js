@@ -4,7 +4,7 @@ const client = require("./mock-client");
 
 module.exports.client = async () => {  
   const existsMethod = sinon.stub();
-  const result = await existsResponse(true);
+  const response = await existsResponse(true);
   const existsProperty = sinon.spy(result, "success", ["get"]);
   const removeImageMethod = sinon.stub();
   

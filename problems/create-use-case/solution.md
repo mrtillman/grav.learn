@@ -6,8 +6,8 @@ module.exports = class GetUserAddressUseCase {
     this.client = null;
   }
   async execute(){
-    const addressesResult = await this.client.addresses();
-    const { userAddresses } = addressesResult.Value;
+    const addressesResponse = await this.client.addresses();
+    const { userAddresses } = addressesResponse.Value;
     return userAddresses.find(
       address => address.email == this.client.email
     );

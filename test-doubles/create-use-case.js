@@ -1,7 +1,7 @@
 const sinon = require('sinon');
 const { 
-  addressesResult, userAddresses
-} = require('./result-stubs');
+  addressesResponse, userAddresses
+} = require('./response-stubs');
 const client = require('./mock-client');
 const address = userAddresses[2];
 client.email = address.email;
@@ -9,8 +9,8 @@ client.email = address.email;
 module.exports.client = async () => {
 
   const addressesMethod = sinon.stub();
-  const result = await addressesResult();
-  const userAddressesProperty = sinon.spy(result.Value, "userAddresses", ["get"]);
+  const response = await addressesResponse();
+  const userAddressesProperty = sinon.spy(response, "userAddresses", ["get"]);
   
   addressesMethod.returns(Promise.resolve(result));
   client.addresses = addressesMethod;
