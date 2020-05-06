@@ -1,4 +1,6 @@
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   let result = await client.exists();
   let { success } = result.Value;
   while(success){

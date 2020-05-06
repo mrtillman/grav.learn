@@ -1,4 +1,6 @@
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   const imageUrl = "https://via.placeholder.com/150";
   const saveImageResult = await client.saveImageUrl(imageUrl);
   await client.useUserImage(saveImageResult.Value.imageName);

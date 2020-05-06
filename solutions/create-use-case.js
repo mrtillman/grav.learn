@@ -1,6 +1,8 @@
+const { GravatarClient } = require('grav.client');
+
 module.exports = class GetUserAddressUseCase {
   constructor(){
-    this.client = null;
+    this.client = new GravatarClient();
   }
   async execute(){
     const addressesResult = await this.client.addresses();
