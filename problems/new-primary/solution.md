@@ -1,12 +1,13 @@
 Here is the reference solution, if you're curious:
 
 ```js
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   const imageUrl = "https://via.placeholder.com/150";
-  const saveImageResult = await client.saveImageUrl(imageUrl);
-  await client.useUserImage(saveImageResult.Value.imageName);
-  const addressesResult = await client.addresses();
-  const { userAddresses } = addressesResult.Value;
+  const { imageName } = await client.saveImageUrl(imageUrl);
+  await client.useUserImage(imageName);
+  const { userAddresses } = await client.addresses();
   return {
     primaryImageUrl: userAddresses.find(
       address => address.email == client.email
@@ -18,15 +19,16 @@ module.exports = async function (client) {
 Alternatively:
 
 ```js
-const { SetNewImageUseCase } = require('grav.client');
+const { 
+  GravatarClient, SetNewImageUseCase
+} = require('grav.client');
 
-module.exports = async function (client) {
+module.exports = async function (client = new GravatarClient()) {
   const setNewImage = new SetNewImageUseCase();
   setNewImage.client = client;
   setNewImage.imageUrl = "https://via.placeholder.com/150";
   await setNewImage.execute();
-  const addressesResult = await client.addresses();
-  const { userAddresses } = addressesResult.Value;
+  const { userAddresses } = await client.addresses();
   return {
     primaryImageUrl: userAddresses.find(
       address => address.email == client.email

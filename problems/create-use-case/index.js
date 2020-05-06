@@ -34,11 +34,11 @@ exports.verify = verify({ modeReset: true }, async function (args, test) {
         if(!didReturnClass || !useCase.execute) { return false }
         const client = await mockClient(ProblemTypes.CreateUseCase);
         useCase.client = client;
-        const result = await useCase.execute();
-        return client.didFindUserAddress(result)
+        const response = await useCase.execute();
+        return client.didFindUserAddress(response)
     }
 
-    test.equal(didReturnClass, true, 'you returned a class');
+    test.equal(didReturnClass, true, 'you exported a class');
     test.equal(didImplementUseCase(), true, 'you implemented a use case');
     test.equal(await didFindUserAddress(), true, "your use case found the user address");
     test.end();

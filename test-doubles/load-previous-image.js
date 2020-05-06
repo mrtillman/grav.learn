@@ -1,10 +1,10 @@
 const sinon = require('sinon');
 const {
-  addressesResult,
+  addressesResponse,
   userAddresses,
-  userImagesResult,
-  useUserImageResult  
-} = require('./result-stubs');
+  userImagesResponse,
+  useUserImageResponse  
+} = require('./response-stubs');
 const client = require("./mock-client");
 
 module.exports.client = async () => {
@@ -14,12 +14,12 @@ module.exports.client = async () => {
 
   client.email = userAddresses[0].email;
 
-  addressesMethod.returns(addressesResult());
-  useUserImageMethod.returns(useUserImageResult());
+  addressesMethod.returns(addressesResponse());
+  useUserImageMethod.returns(useUserImageResponse());
 
-  const result = await userImagesResult();
-  const userImagesProperty = sinon.spy(result.Value, "userImages", ["get"]);
-  userImagesMethod.returns(Promise.resolve(result));
+  const response = await userImagesResponse();
+  const userImagesProperty = sinon.spy(response, "userImages", ["get"]);
+  userImagesMethod.returns(Promise.resolve(response));
   
   client.addresses = addressesMethod;
   client.userImages = userImagesMethod;

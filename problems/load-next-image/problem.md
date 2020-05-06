@@ -14,7 +14,9 @@ https://github.com/mrtillman/grav.client/wiki/Use-Cases
 Here is some boilerplate code to get you started:
 
 ```js
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   
   // ...
 

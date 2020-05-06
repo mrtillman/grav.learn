@@ -1,9 +1,11 @@
 Here is the reference solution, if you're curious:
 
 ```js
-module.exports = async function (client) {
-  const result = await client.addresses();
-  const { userAddresses } = result.Value;
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
+  const response = await client.addresses();
+  const { userAddresses } = response;
   return {
     addressCount: userAddresses.length,
     addressMissingPrimaryImage: userAddresses.find(

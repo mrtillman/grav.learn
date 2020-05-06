@@ -1,10 +1,10 @@
 const sinon = require('sinon');
 const { imageName } = require('grav.client/Release/Common/TestDoubles/primitive-stubs');
 const { 
-  saveImageUrlResult,
-  useUserImageResult,
-  addressesResult, userAddresses
-} = require('./result-stubs');
+  saveImageUrlResponse,
+  useUserImageResponse,
+  addressesResponse, userAddresses
+} = require('./response-stubs');
 const { email } = userAddresses[0];
 const client = require('./mock-client');
 client.email = email;
@@ -15,9 +15,9 @@ module.exports.client = async () => {
   const saveImageUrlMethod = sinon.stub();
   const useUserImageMethod = sinon.stub();
   
-  addressesMethod.returns(addressesResult());
-  saveImageUrlMethod.returns(saveImageUrlResult());
-  useUserImageMethod.returns(useUserImageResult());
+  addressesMethod.returns(addressesResponse());
+  saveImageUrlMethod.returns(saveImageUrlResponse());
+  useUserImageMethod.returns(useUserImageResponse());
 
   client.addresses = addressesMethod;
   client.saveImage = saveImageUrlMethod;

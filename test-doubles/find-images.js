@@ -1,14 +1,14 @@
 const sinon = require('sinon');
 const { ImageRating } = require('grav.client');
-const { userImagesResult, userImages } = require('./result-stubs');
+const { userImagesResponse, userImages } = require('./response-stubs');
 const client = require("./mock-client");
 
 module.exports.client = async () => {
   const userImagesMethod = sinon.stub();
-  const result = await userImagesResult();
-  const userImagesProperty = sinon.spy(result.Value, "userImages", ["get"]);
+  const response = await userImagesResponse();
+  const userImagesProperty = sinon.spy(response, "userImages", ["get"]);
 
-  userImagesMethod.returns(Promise.resolve(result));
+  userImagesMethod.returns(Promise.resolve(response));
   client.userImages = userImagesMethod;
 
   client.didCountImages = (answer) => (

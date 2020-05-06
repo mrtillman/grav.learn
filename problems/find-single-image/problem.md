@@ -8,7 +8,9 @@ Use the `client` to find the image named "bravo".
 Here is some boilerplate code to get you started:
 
 ```js
-module.exports = async function (client) {
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
   
   // ...
 

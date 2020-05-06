@@ -14,9 +14,11 @@ Review your solution to challenge 5, SET NEW PRIMARY IMAGE.
 Here is some boilerplate code to get you started:
 
 ```js
+const { GravatarClient } = require('grav.client');
+
 module.exports = class GetUserAddressUseCase {
   constructor(){
-    this.client = null;
+    this.client = new GravatarClient();
   }
   execute(){
     // ...

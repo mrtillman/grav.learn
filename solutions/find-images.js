@@ -1,8 +1,10 @@
-const { ImageRating } = require('grav.client');
+const { 
+  GravatarClient, ImageRating 
+} = require('grav.client');
 
-module.exports = async function (client) {
-  const result = await client.userImages();
-  const { userImages } = result.Value;
+module.exports = async function (client = new GravatarClient()) {
+  const response = await client.userImages();
+  const { userImages } = response;
   return {
     numberOfImages: userImages.length,
     numberOfPgRatedImages: userImages.filter(

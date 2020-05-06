@@ -1,13 +1,15 @@
 Here is the reference solution, if you're curious:
   
 ```js
-module.exports = async function (client) {
-  let result = await client.exists();
-  let { success } = result.Value;
-  while(success){
+const { GravatarClient } = require('grav.client');
+
+module.exports = async function (client = new GravatarClient()) {
+  let response = await client.exists();
+  let { success } = response;
+  while(success) {
     await client.removeImage();
-    result = await client.exists();
-    success = result.Value.success;
+    response = await client.exists();
+    success = response.success;
   }
 }
 ```
