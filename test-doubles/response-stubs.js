@@ -5,7 +5,7 @@ const stub = require('grav.client/Release/Common/TestDoubles/json-response-stubs
 const { 
   AddressesMethodResponse, ExistsMethodResponse, 
   RemoveImageMethodResponse, UserImagesMethodResponse,
-  SaveImageUrlMethodResponse, DeleteUserImageMethodResponse,
+  SaveImageMethodResponse, DeleteUserImageMethodResponse,
   UseUserImageMethodResponse
 } = require('grav.client/Release/Domain/method-responses');
 
@@ -55,7 +55,7 @@ module.exports.userImagesResponse = () => {
 module.exports.userImages = userImages;
 
 module.exports.saveImageUrlResponse = () => {
-  const response = new SaveImageUrlMethodResponse("");
+  const response = new SaveImageMethodResponse("");
   response.imageName = imageName;
   return Promise.resolve(response);
 }
