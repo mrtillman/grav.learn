@@ -1,9 +1,11 @@
 Here is the reference solution, if you're curious:
 
 ```js
-const { ImageRating } = require('grav.client');
+const { 
+  GravatarClient, ImageRating 
+} = require('grav.client');
 
-module.exports = async function (client) {
+module.exports = async function (client = new GravatarClient()) {
   const response = await client.userImages();
   const { userImages } = response;
   return {

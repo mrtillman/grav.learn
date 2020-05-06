@@ -12,7 +12,7 @@ module.exports.client = async () => {
   const response = await addressesResponse();
   const userAddressesProperty = sinon.spy(response, "userAddresses", ["get"]);
   
-  addressesMethod.returns(Promise.resolve(result));
+  addressesMethod.returns(Promise.resolve(response));
   client.addresses = addressesMethod;
 
   client.didFindUserAddress = (answer) => (

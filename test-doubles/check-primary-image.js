@@ -5,10 +5,10 @@ const client = require("./mock-client");
 module.exports.client = async () => {  
   const existsMethod = sinon.stub();
   const response = await existsResponse(true);
-  const existsProperty = sinon.spy(result, "success", ["get"]);
+  const existsProperty = sinon.spy(response, "success", ["get"]);
   const removeImageMethod = sinon.stub();
   
-  existsMethod.onFirstCall().returns(Promise.resolve(result));
+  existsMethod.onFirstCall().returns(Promise.resolve(response));
   existsMethod.onSecondCall().returns(existsResponse(false));
   removeImageMethod.onFirstCall().returns(removeImageResponse());
   client.exists = existsMethod;

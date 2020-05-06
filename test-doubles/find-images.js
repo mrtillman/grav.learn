@@ -8,7 +8,7 @@ module.exports.client = async () => {
   const response = await userImagesResponse();
   const userImagesProperty = sinon.spy(response, "userImages", ["get"]);
 
-  userImagesMethod.returns(Promise.resolve(result));
+  userImagesMethod.returns(Promise.resolve(response));
   client.userImages = userImagesMethod;
 
   client.didCountImages = (answer) => (
