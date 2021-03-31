@@ -25,7 +25,7 @@
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
     "grav.client": "^2.4.19",
-    "marked": "^1.0.0",
+    "marked": "^2.0.0",
     "marked-terminal": "^4.1.0",
     "sinon": "^8.0.2"
   },
