@@ -1,6 +1,6 @@
 {
   "name": "grav.learn",
-  "version": "2.2.12",
+  "version": "2.2.13",
   "description": "an intro to grav.client via a set of self-guided workshops",
   "scripts": {
     "start": "node runner.js"
@@ -24,7 +24,7 @@
     "@types/jest": "^24.0.25",
     "adventure": "^2.2.0",
     "adventure-verify": "^2.1.1",
-    "grav.client": "^2.4.19",
+    "grav.client": "^2.4.21",
     "marked": "^2.0.0",
     "marked-terminal": "^4.1.0",
     "sinon": "^8.0.2"
